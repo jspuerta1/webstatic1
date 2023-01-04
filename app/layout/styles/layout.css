@@ -42,7 +42,7 @@ File: Layout CSS
 
 /* Page Intro
 --------------------------------------------------------------------------------------------------------------- */
-#pageintro{padding:250px 0;}
+#pageintro{padding:110px 0;}
 
 #pageintro article{display:block; max-width:75%;}
 #pageintro .heading{margin-bottom:50px; font-size:3rem;}
@@ -52,7 +52,7 @@ File: Layout CSS
 
 /* Content Area
 --------------------------------------------------------------------------------------------------------------- */
-.container{padding:80px 0;}
+.container{padding:60px 0;}
 
 /* Content */
 .container .content{}
@@ -76,13 +76,14 @@ File: Layout CSS
 .overview article i{display:inline-block; position:absolute; top:0; left:0; width:50px; overflow:hidden; line-height:1; font-size:36px;}
 .overview article .heading, .overview article p{margin-bottom:20px;}
 
-.testimonials li:last-child{margin-bottom:0;}/* Used when elements stack in smaller viewports */
+.testimonials li:last-child{margin-bottom:0; display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: center !important;}/* Used when elements stack in smaller viewports */
 .testimonials blockquote{margin-bottom:30px; padding:20px;}
 .testimonials blockquote::before{top:10px; left:10px; font-size:32px; line-height:32px;}
 .testimonials blockquote::after{display:block; position:absolute; bottom:-15px; left:50%; margin-left:-15px; width:0; height:0; content:""; border:15px solid transparent; border-bottom:none;}
 .testimonials figure{text-align:center;}
 .testimonials figure *{margin:0; line-height:1;}
 .testimonials figure img{margin:0 0 15px 0;}
+.img_person {background-color: #222222; width: 240px; height: 340px;}
 .testimonials figcaption .heading{font-size:1.2rem; font-weight:700;}
 .testimonials figcaption em{font-size:.8rem;}
 
@@ -308,9 +309,9 @@ input:focus, textarea:focus, *:required:focus{border-color:#04DEE0;}
 .overview a{color:inherit;}
 .overview article:hover a{color:#04DEE0;}
 
-.testimonials blockquote{color:#474747; background-color:#FFFFFF;}
+.testimonials blockquote{color:#474747; background-color:#FFFFFF; width: 240px; height: 340px;}
 .testimonials blockquote::before{color:rgba(244,244,244,.8);/* #F4F4F4 */}
-.testimonials blockquote::after{border-top-color:#FFFFFF;}
+/* .testimonials blockquote::after{border-top-color:#FFFFFF;} */
 
 
 /* Click to Action */
