@@ -11,6 +11,9 @@ File: Layout CSS
 @import url("font-awesome.min.css");
 @import url("framework.css");
 
+::-webkit-scrollbar{width:7px;}
+::-webkit-scrollbar-thumb{background-color: #041b2d; border-radius: 3px;}
+
 /* Rows
 --------------------------------------------------------------------------------------------------------------- */
 .row0, .row0 a{}
@@ -28,7 +31,12 @@ File: Layout CSS
 #topbar *{margin:0;}
 #topbar ul li{display:inline-block; margin-right:15px;}
 #topbar ul li:last-child{margin-right:0; padding-right:0; border-right:none;}
-#topbar i{line-height:normal;}
+#topbar i{line-height:normal;  font-size: 17px;}
+#topbar li:nth-child(1) i:hover {transform: scale(1.3); color: #3b5998!important;}
+#topbar li:nth-child(2) i:hover {transform: scale(1.3); color: #C13584!important;}
+#topbar li:nth-child(3) i:hover {transform: scale(1.3); color: #db4a39!important;}
+#topbar li:nth-child(4) i:hover {transform: scale(1.3); color: #00ACEE!important;}
+#topbar li:nth-child(5) i:hover {transform: scale(1.3); color: #2BB741!important;}
 #topbar > div:first-of-type ul li i{margin-right:5px;}
 
 
@@ -265,17 +273,17 @@ td{border-width:0 1px;}
 /* Colours
 --------------------------------------------------------------------------------------------------------------- */
 body{color:#7A7A7A; background-color:#FFFFFF;}
-a{color:#04DEE0;}
+a{color:#1486DE;}
 a:active, a:focus{background:transparent;}/* IE10 + 11 Bugfix - prevents grey background */
 hr, .borderedbox{border-color:#D7D7D7;}
 label span{color:#FF0000; background-color:inherit;}
 input:focus, textarea:focus, *:required:focus{border-color:#04DEE0;}
 
-.overlay{color:#FFFFFF; background-color:inherit;}
+.overlay{color:#FFFFFF; background-image:url('../assets/images/right-4944555_1920.jpg');}
 .overlay::after{color:inherit; background-color:rgba(0,0,0,.8);}
 .overlay.light::after{background-color:rgba(0,0,0,.55);}
 
-.btn, .btn.inverse:hover{color:#FFFFFF; background-color:#04DEE0; border-color:#04DEE0;}
+.btn, .btn.inverse:hover{color:#FFFFFF; background-color:#041b2d; border-color:#041b2d;}
 .btn:hover, .btn.inverse{color:inherit; background-color:transparent; border-color:inherit;}
 
 .imgover:hover::before{background:rgba(0,0,0,.55);}
@@ -284,7 +292,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#04DEE0;}
 
 /* Rows */
 .row0, .row0 a{color:#FFFFFF;}
-.row1{color:#FFFFFF; background-color:rgba(0,0,0,.6);}
+.row1{color:#FFFFFF; background-color:rgba(4, 27, 45, 0.6);}
 .row2{color:#FFFFFF; background-color:#222222;}
 .row3{color:#7A7A7A; background-color:#FFFFFF;}
 .row4{color:#7A7A7A; background-color:#F7F7F7;}
@@ -294,7 +302,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#04DEE0;}
 
 
 /* Top Bar */
-#topbar ul li:first-child a{color:#04DEE0;}
+/* #topbar ul li:first-child a{color:#04DEE0;} */
 
 
 /* Header */
@@ -348,7 +356,7 @@ if your not worried about it, simply delete it, as the placeholder will take on 
 .pagination a, .pagination strong{border-color:#D7D7D7;}
 .pagination .current *{color:#FFFFFF; background-color:#04DEE0;}
 
-#backtotop{color:#FFFFFF; background-color:#04DEE0;}
+#backtotop{color:#FFFFFF; background-color:#041b2d;}
 
 
 /* Tables + Comments */
@@ -358,6 +366,10 @@ th{color:#FFFFFF; background-color:#373737;}
 tr, #comments li, #comments input[type="submit"], #comments input[type="reset"]{color:inherit; background-color:#FBFBFB;}
 tr:nth-child(even), #comments li:nth-child(even){color:inherit; background-color:#F7F7F7;}
 table a, #comments a{background-color:inherit;}
+
+/* =========== BTN WHATSAPP ============== */
+.float_whatsapp{position: fixed; width: 50px; height: 50px; bottom: 70px; right: 15px; background-color: #2BB741; text-align: center; border-radius: 50px; z-index: 100;}
+.float_whatsapp fa-whatsapp{color: #FFFFFF;}
 
 
 /* ------------------------------------------------------------------------------------------------------------ */
