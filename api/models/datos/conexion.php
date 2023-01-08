@@ -6,7 +6,7 @@ class ConectionBd extends PDO{
     private static $instance;
     private static $tipo_de_base = 'mysql';
     private static $host = 'localhost';
-    private static $nombre_de_base = 'crud2';
+    private static $nombre_de_base = 'moncho';
     private static $usuario = 'root';
     private static $contrasena = '';
     private static $opciones = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8', PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
