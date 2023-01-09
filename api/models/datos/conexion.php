@@ -1,7 +1,4 @@
 <?php
-
-//CONEXIÓN A BD COPIADA************************************+
-
 class ConectionBd extends PDO{
     private static $instance;
     private static $tipo_de_base = 'mysql';
