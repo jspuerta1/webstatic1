@@ -23,7 +23,7 @@ body{color:#7A7A7A; background-color:#FFFFFF;}
 .row0{width: 100%; height: 7%;}
 .row1{width: 100%; height: 13vh; color:#FFFFFF; background-color:rgba(4, 27, 45, 0.6);}
 .row2{width: 100%; height: 100vh; color:#7A7A7A; background-color:#FFFFFF;}
-.row3{width: 100%; height: 100vh; color:#FFFFFF; background-image:url('../assets/images/background2.jpg');}
+.row3{width: 100%; height: 100vh; background-image:url('../assets/images/background2.jpg');}
 .row4{width: 100%; height: 85vh; color:#7A7A7A; background-color:#F7F7F7;}
 .row5{width: 100%; height: 15vh;}
 
@@ -31,7 +31,7 @@ body{color:#7A7A7A; background-color:#FFFFFF;}
 .row5 a{color:#7A7A7A; background-color:#FFFFFF;}
 
 /*====================================== HEADER =============================================*/
-#header{width: 95%; height: 100%;}
+#header{width: 90%; height: 100%;}
 /*---------------------- TOP BAR ICONS -------------------------*/
 #topbar{width: 90%; padding:15px 0; font-size:.8rem; text-transform:uppercase;}
 #topbar *{margin:0;}
@@ -51,25 +51,17 @@ body{color:#7A7A7A; background-color:#FFFFFF;}
 /*-------------- BACK TO TOP -------------*/
 #backtotop{z-index:999; display:inline-block; position:fixed; visibility:hidden; bottom:20px; right:20px; width:36px; height:36px; line-height:36px; font-size:16px; text-align:center; opacity:.2;}
 #backtotop i{display:block; width:100%; height:100%; line-height:inherit;}
-#backtotop.visible{visibility:visible; opacity:.5;}
-#backtotop:hover{opacity:1;}
+#backtotop.visible{visibility:visible; opacity:1;}
 /*------------ MENU ----------------*/
 #mainav{width: 50%; height: 100%; display: flex; align-items: center;}
 #mainav ul{width: 100%; display: flex; justify-content: space-evenly;}
-/* nav ul, nav ol{margin:0; padding:0; list-style:none; display: flex; justify-content: space-between;} */
 #mainav, #breadcrumb, .sidebar nav{line-height:normal;}
-#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{position:absolute; font-family: 'Poppins', sans-serif; font-size:10px; line-height:10px;}
-/*--------- Top Navigation ------------*/
 #mainav ul{text-transform:uppercase;}
-#mainav ul ul{z-index:9999; position:absolute; width:180px; text-transform:none;}
-#mainav li{display:inline-block; position:relative; margin:0 0 0 0; padding:0;}
-#mainav li:last-child{margin-right:0;}
-#mainav li li{width:100%; margin:0;}
-#mainav li a{display:block; padding:30px 0;}
+#mainav ul ul{z-index:9999; position:absolute; width:180px; display: flex; flex-direction: column; text-transform:none;}
+#mainav li{list-style: none; cursor: pointer;}
+#mainav li a{text-align: center;  padding: 30px 0;}
 #mainav li li a{border:solid; border-width:0 0 1px 0;}
-#mainav .drop{padding-left:15px; cursor: pointer;}
 #mainav li li a, #mainav li li .drop{display:block; margin:0; padding:10px 15px;}
-#mainav li li .drop::after{top:15px; left:5px;}
 #mainav ul ul{visibility:hidden; opacity:0;}
 #mainav ul li:hover > ul{visibility:visible; opacity:1;}
 #mainav form{display:none; margin:0; padding:0;}
@@ -106,11 +98,10 @@ body{color:#7A7A7A; background-color:#FFFFFF;}
 
 /*=========================== MAIN ============================*/
 /*---------------------- CONTENT MAIN ALLS SECTION ------------------------*/
-.container{padding:40px 0; width: 85%; height: 100%; display: flex; flex-direction: column;}
+.container{padding:20px 0; width: 85%; height: 100%; display: flex; flex-direction: column;}
 /* ------------------ TITLES SECTION/PARRAFOS ------------------ */
-.sectiontitle *{margin:0;}
-.sectiontitle{display:block; max-width:55%; margin:0 auto 40px; text-align:center;}
-.sectiontitle .heading{font-family: 'Poppins', sans-serif!important; color: #2F5878; font-size: 20px; font-weight: 900;}
+.sectiontitle{display: flex; justify-content:center; align-items: center; flex-direction: column;}
+.sectiontitle .heading{font-family: 'Poppins', sans-serif!important; font-size: 30px; font-weight: 900; text-align: center;}
 .row2 .heading{color:#244559; font-family: 'Poppins', sans-serif;}
 .row3 .heading{color:#FFFFFF; font-family: 'Poppins', sans-serif;}
 .row4 .heading{color: #244559; font-family: 'Poppins', sans-serif;}
@@ -134,15 +125,28 @@ body{color:#7A7A7A; background-color:#FFFFFF;}
 /*---------------------- SECTION SERVICES ------------------------------*/
 .services{display: grid!important; grid-template-columns: repeat(3, 1fr); gap: 20px; place-items: center;}
 .services > .one_third{width: 250px; height: 250px; margin: 0!important; display: flex; flex-direction: column; padding: 1rem 1rem; background-color: rgba(0, 0, 0, 0.7);}
-.square_services{width:100%; height:100%}
+.one_third > li{width: 100%; height: 100%;}
+.square_services{width:100%; height:100%; display:block; position:relative; padding:0 0 0 50px;}
 .services a{color: #244559;}
 .content_service{width: 100%; height: 100%;}
 .description_services{width: 100%; height: 100%; display:flex; justify-content: space-between; flex-direction: column;}
-.one_third > li{width: 100%; height: 100%;}
-.square_services{display:block; position:relative; padding:0 0 0 50px;}
-.square_services *{margin:0; padding:0;}
 .square_services i{display:inline-block; position:absolute; top:0; left:0; width:50px; overflow:hidden; line-height:1; font-size:36px;}
 .square_services .heading, .services .square_services p{font-family: 'Poppins', sans-serif;}
+/*---------------------- SECTION ESCRIBENOS ------------------------------*/
+.div_contact{background-image:url('../assets/images/background5.jpg');}
+#section_contact{padding: 60px 0!important;}
+.form_contact{width: 50%;}
+.form_contact input{width: 400px; height: 30px;}
+.form_contact label{color: #244559; font-weight: bold; font-size: 20px;}
+.form_contact textarea{background: transparent; width: 400px; height: 200px; border: 1px solid #FFFFFF;}
+.content_inputs{display: flex; align-items: center; flex-direction: column;}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input::placeholder{color: rgba(255, 255, 255, 0.5)!important;}
+.content_inputs button{background-color: #244559 !important;}
 
 .testimonials li:last-child{margin-bottom:0; display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: center !important;}/* Used when elements stack in smaller viewports */
 .testimonials blockquote{margin-bottom:30px; padding:20px;}
@@ -154,9 +158,6 @@ body{color:#7A7A7A; background-color:#FFFFFF;}
 .img_person {background-color: #222222; width: 240px; height: 340px;}
 .testimonials figcaption .heading{font-size:1.2rem; font-weight:700; font-family: 'Poppins', sans-serif;}
 .testimonials figcaption em{font-size:.8rem;}
-
-/* Sidebar */
-.container .sidebar{}
 
 .sidebar .sdb_holder{margin-bottom:50px;}
 .sidebar .sdb_holder:last-child{margin-bottom:0;}
@@ -170,7 +171,6 @@ body{color:#7A7A7A; background-color:#FFFFFF;}
 #footer .linklist li:last-child{margin:0; padding:0; border:none;}
 #footer .linklist li::before, #footer .linklist li::after{display:table; content:"";}
 #footer .linklist li, #footer .linklist li::after{clear:both;}
-#footer .contact{}
 #footer .contact.linklist li, #footer .contact.linklist li:last-child{position:relative; padding-left:40px;}
 #footer .contact li *{margin:0; padding:0; line-height:1.6;}
 #footer .contact li i{display:block; position:absolute; top:0; left:0; width:30px; font-size:16px; text-align:center;} 
@@ -187,13 +187,12 @@ body{color:#7A7A7A; background-color:#FFFFFF;}
 #comments textarea{overflow:auto;}
 #comments div{margin-bottom:15px;}
 #comments input[type="submit"], #comments input[type="reset"]{display:inline-block; width:auto; min-width:150px; margin:0; padding:8px 5px; cursor:pointer;}
-/*---------------- FONT AWESOME SOCIAL ICONS --------------*/
+/*---------------- SOCIAL ICONS FOOTER --------------*/
 .faico{margin:0; padding:0; list-style:none;}
 .faico li{display:inline-block; margin:8px 5px 0 0; padding:0; line-height:normal;}
 .faico li:last-child{margin-right:0;}
 .faico a{display:inline-block; width:36px; height:36px; line-height:36px; font-size:18px; text-align:center;}
 .faico a{color:#FFFFFF; background-color:#000000;}
-.faico a:hover{}
 .faicon-facebook:hover{background-color:#3B5998;}
 .faicon-instagram:hover{background-color:#C13584;}
 .faicon-envelope:hover{background-color:#db4a39;}
@@ -201,8 +200,7 @@ body{color:#7A7A7A; background-color:#FFFFFF;}
 .faicon-whatsapp:hover{background-color:#2BB741;}
 .faicon-vk:hover{background-color:#4E658E;}
 /*------------------ Copyright ---------------------*/
-#copyright{padding:20px 0;}
-#copyright *{margin:0; padding:0;}
+#copyright{width: 85%; height:100%; display: flex; justify-content: flex-start; align-items: center;}
 
 
 /* Tables
@@ -285,34 +283,28 @@ table a, #comments a{background-color:inherit;}
 
 /*================== MEDIA QUERIES =====================*/
 /*---------------- MOBILE DEVICES -----------------------*/
+/* 900 px */
 @media screen and (max-width:900px){
-	.hoc{max-width:90%;}
-
-	#topbar{}
-
 	#header{padding:30px 0;}
 	#header #logo{margin-top:3px;}
 
-	#mainav{}
 	#mainav ul{display:none;}
 	#mainav form{display:block;}
 
-	#breadcrumb{}
-
-	.container{}
 	#comments input[type="reset"]{margin-top:10px;}
 	.pagination li{display:inline-block; margin:0 5px 5px 0;}
+	/*=========================== MAIN ============================*/
+	/*---------------------- SECTION SERVICES ------------------------------*/
+	.services{display: grid!important; grid-template-columns: repeat(2, 1fr); gap: 50px; place-items: center;}
+	.services > .one_third{width: 250px; height: 250px; margin: 0!important; display: flex; flex-direction: column; padding: 1rem 1rem; background-color: rgba(0, 0, 0, 0.7);}
 
-	#footer{}
-
-	#copyright{}
 	#copyright p:first-of-type{margin-bottom:10px;}
 }
-
+/* 750 px */
 @media screen and (max-width:750px){
 	.imgl, .imgr{display:inline-block; float:none; margin:0 0 10px 0;}
 	.fl_left, .fl_right{display:block; float:none;}
-	.group .group > *:last-child, .clear .clear > *:last-child, .clear .group > *:last-child, .group .clear > *:last-child{margin-bottom:0;}/* Experimental - Needs more testing in different situations, stops double margin when stacking */
+	.group .group > *:last-child, .clear .clear > *:last-child, .clear .group > *:last-child, .group .clear > *:last-child{margin-bottom:0;}
 	.one_half, .two_third, .one_quarter, .two_quarter, .three_quarter{display:block; float:none; width:auto; margin:0 0 30px 0; padding:0;}
 
 	#topbar{padding-top:15px; text-align:center;}
@@ -324,19 +316,11 @@ table a, #comments a{background-color:inherit;}
 	#content_intro article{max-width:none; text-align:left;}
 	#content_intro .heading{font-size:2rem;}
 
-	.sectiontitle{max-width:none;}
+	.services > li:nth-last-child(-n+3){margin-bottom:50px;}
 
-	/* .services > li:nth-last-child(-n+3){margin-bottom:50px;} */
-
-	#footer{padding-bottom:50px;}/* Not required, just looks better */
+	#footer{padding-bottom:50px;}
 }
-
-@media screen and (max-width:450px){
-	#topbar > div:first-of-type ul li{display:block; margin:0 0 2px 0;}
-}
-
-/* Other
---------------------------------------------------------------------------------------------------------------- */
+/* 650 px */
 @media screen and (max-width:650px){
 	.scrollable{display:block; width:100%; margin:0 0 30px 0; padding:0 0 15px 0; overflow:auto; overflow-x:scroll;}
 	.scrollable table{margin:0; padding:0; white-space:nowrap;}
@@ -346,4 +330,9 @@ table a, #comments a{background-color:inherit;}
 
 	.font-x2{font-size:1.4rem;}
 	.font-x3{font-size:1.6rem;}
+}
+/* 450 px */
+@media screen and (max-width:450px){
+
+	#topbar > div:first-of-type ul li{display:block; margin:0 0 2px 0;}
 }

@@ -1,12 +1,4 @@
-/*
-Template Name: Oleald
-Author: <a href="https://www.os-templates.com/">OS Templates</a>
-Author URI: https://www.os-templates.com/
-Licence: Free to use under our free template licence terms
-Licence URI: https://www.os-templates.com/template-terms
-File: Back to Top JS
-*/
-
+//Function de scroll top
 jQuery("#backtotop").click(function () {
     jQuery("body,html").animate({
         scrollTop: 0
