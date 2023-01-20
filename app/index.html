@@ -9,7 +9,7 @@
       media="all">
     <script src="app/js/jquerys/jquery-3.6.3.min.js"></script>
     <script>$(document).ready(function() {})</script>
-    <script src="app/js/controller/formContactCtrl.js"></script>
+    <script src="app/js/controller/controller.js"></script>
     <script src="app/js/controller/main.js"></script>
   </head>
   <body id="top">
@@ -67,12 +67,12 @@
       </div>
     </div>
     <div class="wrapper row2">
-      <main class="hoc container clear">
+      <main class="hoc section_customers container clear">
         <!-- main body -->
         <div class="sectiontitle">
           <h6 class="heading">Algunos de nuestros clientes</h6>
         </div>
-        <div class="group customers">
+        <div class="group content_customers">
           <div class="square_customers one_third first"><a class="imgover
               btmspace-30"
               href="#"><img src="app/images/demo/320x240.png" alt=""></a>
@@ -114,7 +114,7 @@
             <footer><a href="#">Service Details &raquo;</a></footer>
           </div>
         </div>
-        <!-- / main body -->
+        <!---- servicios juridicos ---->
         <div class="clear"></div>
       </main>
     </div>
@@ -219,95 +219,38 @@
           </ul>
         </section>
       </div>
+      <!---- mi experiencia ---->
       <div class="wrapper row2">
-        <figure class="hoc container clear">
-          <figcaption class="sectiontitle">
-            <h6 class="heading">Semper sed vestibulum faucibus</h6>
-          </figcaption>
-          <ul class="nospace group center overview">
-            <li class="one_third"><a class="imgover" href="#"><img
-                  src="app/images/demo/320x418.png" alt=""></a></li>
-            <li class="one_third"><a class="imgover" href="#"><img
-                  src="app/images/demo/320x418.png" alt=""></a></li>
-            <li class="one_third"><a class="imgover" href="#"><img
-                  src="app/images/demo/320x418.png" alt=""></a></li>
-          </ul>
-          <footer class="center"><a class="btn" href="#">Elit vitae convallis</a></footer>
-        </figure>
-      </div>
-      <div class="wrapper row2 bgded overlay"
-        style="background-image:url('app/images/demo/backgrounds/03.png');">
-        <section class="hoc container clear testimonials">
-          <div class="sectiontitle">
-            <h6 class="heading">Hendrerit ut et tortor sed ante</h6>
-          </div>
-          <ul class="nospace group btmspace-50">
-            <li class="one_half first">
-              <figure class="content_img_person"><img class="img_person"
-                  src="app/images/demo/60x60.png" alt="">
-                <figcaption>
-                  <h6 class="heading">John Doe</h6>
-                  <em>CEO</em></figcaption>
-              </figure>
-            </li>
-            <li class="one_half">
-              <blockquote>Lacus eu turpis ut consequat ex id interdum morbi
-                placerat commodo felis nec tempus vivamus cursus purus vel
-                commodo
-                venenatis in faucibus nunc quis pulvinar aliquam eu elit
-                vestibulum lobortis mi
-              </blockquote>
-            </li>
-          </ul>
-          <footer class="center"><a class="btn" href="#">View More &raquo;</a></footer>
-        </section>
-      </div>
-      <div class="wrapper">
         <section class="hoc container clear">
           <div class="sectiontitle">
-            <h6 class="heading">Non fringilla felis nunc placerat</h6>
+            <h6 class="heading">Mi experiencia</h6>
             <p>Purus quis sagittis nunc quisque vel malesuada purus nam ut</p>
           </div>
-          <div class="group excerpt btmspace-80">
-            <div class="one_third first"><a class="imgover btmspace-30"
-                href="#"><img src="app/images/demo/320x240.png" alt=""></a>
-              <ul class="nospace meta">
-                <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
-                <li><i class="fa fa-tag"></i> <a href="#">Tag Name</a></li>
-              </ul>
-              <h6 class="heading">Erat integer eleifend</h6>
-              <p>Ex eget rhoncus laoreet justo dui viverra justo eget ultricies
-                justo mi ut dui phasellus ut leo volutpat massa lobortis&hellip;</p>
-              <footer><a href="#">Read More</a></footer>
+          <div class="content_experiences">
+            <div class="square_experience">
+              <div class="square_value">
+                <p id="value_experiences1" id="animation" onload=contador();>0</p>
+              </div>
+              <h6 class="heading">Años de experiencia</h6>
             </div>
-            <div class="one_third"><a class="imgover btmspace-30" href="#"><img
-                  src="app/images/demo/320x240.png" alt=""></a>
-              <ul class="nospace meta">
-                <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
-                <li><i class="fa fa-tag"></i> <a href="#">Tag Name</a></li>
-              </ul>
-              <h6 class="heading">Sodales etiam nec</h6>
-              <p>Dui consectetur pretium vel quis mauris quisque scelerisque dui
-                justo ut volutpat eros vestibulum accumsan nulla viverra&hellip;</p>
-              <footer><a href="#">Read More</a></footer>
+            <div class="square_experience">
+              <div class="square_value">
+                <p id="value_experiences2" id="animation" onload=contador();>0</p>
+              </div>
+              <h6 class="heading">Clientes atendidos</h6>
             </div>
-            <div class="one_third"><a class="imgover btmspace-30" href="#"><img
-                  src="app/images/demo/320x240.png" alt=""></a>
-              <ul class="nospace meta">
-                <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
-                <li><i class="fa fa-tag"></i> <a href="#">Tag Name</a></li>
-              </ul>
-              <h6 class="heading">Laoreet sollicitudin</h6>
-              <p>Dignissim maximus est vel egestas sed efficitur tortor ac
-                eleifend semper leo nisl porttitor orci in malesuada nulla
-                massa&hellip;</p>
-              <footer><a href="#">Read More</a></footer>
+            <div class="square_experience">
+              <div class="square_value">
+                <p id="value_experiences3" id="animation" onload=contador();>0</p>
+              </div>
+              <h6 class="heading">Casos ganados</h6>
             </div>
           </div>
-          <footer class="center"><a class="btn" href="#">Convallis ultricies
-              &raquo;</a></footer>
+          <!-- <footer class="center"><a class="btn" href="#">Convallis ultricies
+              &raquo;</a></footer> -->
         </section>
       </div>
+      <!---- formulario de contacto ---->
       <div class="wrapper div_contact row2 bgded overlay">
         <section id="section_contact" class="hoc container cta clear">
           <div class="sectiontitle">
@@ -326,11 +269,12 @@
               <label>¿Como podemos ayudarte?</label>
               <textarea id="descripcion" class="btmspace-15" type="text"></textarea
                 required autocomplete="off">
-              <button type="button" onclick=formContactSend();>Submit</button>
+              <button type="button" onclick=formContactSend();>Enviar</button>
             </div>
           </form>
         </section>
       </div>
+      <!------------- footer ---------------->
       <div class="wrapper row4">
         <footer id="footer" class="hoc clear">
           <div class="one_quarter">
@@ -344,15 +288,6 @@
               <li><i class="fa fa-phone"></i> +00 (123) 456 7890</li>
               <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
             </ul>
-            <ul class="faico clear">
-              <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a class="faicon-instagram" href="#"><i class="fa
-                    fa-instagram"></i></a></li>
-              <li><a class="faicon-envelope" href="#"><i class="fa
-                    fa-envelope-o"></i></a></li>
-              <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a class="faicon-whatsapp" href="#"><i class="fa fa-whatsapp"></i></a></li>
-            </ul>
           </div>
           <div class="one_quarter">
             <h6 class="heading">Sapien suspendisse non</h6>
@@ -365,21 +300,23 @@
             </ul>
           </div>
           <div class="one_quarter">
-            <h6 class="heading">Erat id sem fringilla</h6>
-            <ul class="nospace linklist">
-              <li><a href="#">Mollis placerat in at</a></li>
-              <li><a href="#">Ligula eget dui ultrices</a></li>
-              <li><a href="#">Porta maecenas eget</a></li>
-              <li><a href="#">Mi a velit tincidunt</a></li>
-              <li><a href="#">Aliquam vel sit amet</a></li>
+            <h6 class="heading">Siguenos</h6>
+            <ul class="faico clear">
+              <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="faicon-instagram" href="#"><i class="fa
+                    fa-instagram"></i></a></li>
+              <li><a class="faicon-envelope" href="#"><i class="fa
+                    fa-envelope-o"></i></a></li>
+              <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="faicon-whatsapp" href="#"><i class="fa fa-whatsapp"></i></a></li>
             </ul>
           </div>
         </footer>
       </div>
       <div class="wrapper row5">
         <div id="copyright" class="hoc clear">
-          <p class="fl_left">Copyright &copy; 2022 - All Rights Reserved - <a
-              href="#">Domain Name</a></p>
+          <p class="fl_left">Copyright &copy; 2022 - Derechos reservados a domain name - <a
+              href="#">Desarrollado por URDEV</a></p>
         </div>
       </div>
       <!-- BTN FLOAT WHATSAPP -->
