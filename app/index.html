@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="">
+
   <head>
     <title>Oleald</title>
     <meta charset="utf-8">
@@ -7,38 +8,38 @@
       maximum-scale=1.0, user-scalable=no">
     <link href="app/css/styles.css" rel="stylesheet" type="text/css"
       media="all">
-    <script src="app/js/jquerys/jquery-3.6.3.min.js"></script>
-    <script>$(document).ready(function() {})</script>
-    <script src="app/js/controller/controller.js"></script>
-    <script src="app/js/controller/main.js"></script>
   </head>
+
   <body id="top">
     <div class="bgded page_intro overlay light">
       <div class="wrapper row0">
         <div id="topbar" class="hoc clear">
           <div class="fl_left">
-            <ul class="nospace">
-              <li><i class="fa fa-phone"></i> +57 310 855 9121</li>
-              <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
+            <ul class="nospace" onload=infoContact();>
+              <li id="telefono"><i class="fa fa-phone"></i></li>
+              <li id="correo"><i class="fa fa-envelope-o"></i></li>
             </ul>
           </div>
           <div class="fl_right">
-            <ul class="nospace">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-              <li><a href="#"><i class="fa fa-envelope-o"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+            <ul class="nospace" onload=infoContact();>
+              <li><a id="iconTop" href="#" target="_blank"><i class="fa
+                    fa-facebook"></i></a></li>
+              <li><a id="iconTop" href="#" target="_blank"><i class="fa
+                    fa-instagram"></i></a></li>
+              <li><a id="iconTop" href="#" target="_blank"><i class="fa
+                    fa-twitter"></i></a></li>
+              <li><a id="iconTop" href="#" target="_blank"><i class="fa
+                    fa-whatsapp"></i></a></li>
             </ul>
           </div>
         </div>
       </div>
       <div class="wrapper row1">
         <header id="header" class="hoc clear">
-          <div id="logo" class="fl_left">
+          <div id="logo">
             <h1><a href="index">Oleald</a></h1>
           </div>
-          <nav id="mainav" class="fl_right">
+          <nav id="mainav">
             <ul class="clear">
               <li class="active"><a href="index">Inicio</a></li>
               <li><a class="drop">Servicios Juridicos</a>
@@ -53,29 +54,35 @@
               <li><a href="#">Blog</a></li>
             </ul>
           </nav>
+          <div class="content_menuIcon"><a><i onclick=showMenu(); id="iconMenu"
+                class="fa fa-bars"></i></a></div>
         </header>
       </div>
       <div id="content_intro" class="hoc clear">
+        <!-- <div class="content_img">
+          <div class="background_img">
+            <img src="app/assets/images/abogadosIntro.png" alt="">
+          </div>
+        </div> -->
         <div class="content_article">
           <h3 class="heading">Sollicitudin<br>
             ligula cras lobortis tortor</h3>
           <p>Et lorem pulvinar consectetur suspendisse nec imperdiet mi sed ac
             porttitor nisl nam viverra diam at lectus malesuada mattis morbi
             quis.</p>
-          <footer><a class="btn" href="#">Bibendum tellus nullam</a></footer>
         </div>
       </div>
     </div>
+    <!----section experiencias de los clientes ---->
     <div class="wrapper row2">
       <main class="hoc section_customers container clear">
-        <!-- main body -->
         <div class="sectiontitle">
           <h6 class="heading">Algunos de nuestros clientes</h6>
         </div>
         <div class="group content_customers">
           <div class="square_customers one_third first"><a class="imgover
-              btmspace-30"
-              href="#"><img src="app/images/demo/320x240.png" alt=""></a>
+              btmspace-30" href="#"><img src="app/images/demo/320x240.png"
+                alt=""></a>
             <h6 class="heading">Sapien lorem interdum</h6>
             <p>Purus in ornare feugiat ex vivamus bibendum augue nisl sit amet
               dictum quam aliquet id phasellus interdum leo sit amet&hellip;</p>
@@ -114,13 +121,14 @@
             <footer><a href="#">Service Details &raquo;</a></footer>
           </div>
         </div>
-        <!---- servicios juridicos ---->
         <div class="clear"></div>
       </main>
     </div>
-    <div class="wrapper row3 bgded overlay light">
+    <!----section servicios juridicos ---->
+    <div class="wrapper servicesResponsive backgroundService row3 bgded overlay
+      light">
       <section class="hoc container clear">
-        <div class="sectiontitle">
+        <div class="sectiontitle title_service_responsive">
           <h6 class="heading">Servicios Juridicos</h6>
         </div>
         <ul class="nospace services">
@@ -134,6 +142,22 @@
                     <p>Sed non vulputate arcu nullam eu massa vitae urna
                       vulputate
                       efficitur in et&hellip;</p>
+                    <footer><a href="#">View Details &raquo;</a></footer>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </div>
+          <div class="one_third">
+            <li>
+              <div class="square_services">
+                <div class="content_service">
+                  <a href="#"><i class="fa fa-gears"></i></a>
+                  <div class="description_services">
+                    <h6 class="heading"><a href="#">Cursus egestas curabitur</a></h6>
+                    <p>Aliquam lorem lorem ac iaculis eros pulvinar nec
+                      vivamus
+                      vestibulum nisl sem&hellip;</p>
                     <footer><a href="#">View Details &raquo;</a></footer>
                   </div>
                 </div>
@@ -190,6 +214,21 @@
             <li>
               <div class="square_services">
                 <div class="content_service">
+                  <a href="#"><i class="fa fa-asl-interpreting"></i></a>
+                  <div class="description_services">
+                    <h6 class="heading"><a href="#">Metus porta tincidunt</a></h6>
+                    <p>Mauris eu tristique aenean dapibus facilisis risus sed
+                      vestibulum sed vitae&hellip;</p>
+                    <footer><a href="#">View Details &raquo;</a></footer>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </div>
+          <div class="one_third">
+            <li>
+              <div class="square_services">
+                <div class="content_service">
                   <a href="#"><i class="fa fa-comments-o"></i></a>
                   <div class="description_services">
                     <h6 class="heading"><a href="#">Eget tempor interdum</a></h6>
@@ -219,14 +258,14 @@
           </ul>
         </section>
       </div>
-      <!---- mi experiencia ---->
-      <div class="wrapper row2">
+      <!---- section mi experiencia ---->
+      <div class="wrapper serviceExperiencia row2">
         <section class="hoc container clear">
           <div class="sectiontitle">
             <h6 class="heading">Mi experiencia</h6>
             <p>Purus quis sagittis nunc quisque vel malesuada purus nam ut</p>
           </div>
-          <div class="content_experiences">
+          <div class="content_experiences" id="content_experiences">
             <div class="square_experience">
               <div class="square_value">
                 <p id="value_experiences1" id="animation" onload=contador();>0</p>
@@ -245,6 +284,12 @@
               </div>
               <h6 class="heading">Casos ganados</h6>
             </div>
+            <div class="square_experience">
+              <div class="square_value">
+                <p id="value_experiences4" id="animation" onload=contador();>0</p>
+              </div>
+              <h6 class="heading">Casos litigados</h6>
+            </div>
           </div>
           <!-- <footer class="center"><a class="btn" href="#">Convallis ultricies
               &raquo;</a></footer> -->
@@ -260,14 +305,16 @@
           </div>
           <form class="form_contact">
             <div class="content_inputs">
-              <input id="names" class="btmspace-15" type="text"
-                placeholder="Nombres completos" required autocomplete="off">
-              <input id="telefono" class="btmspace-15" type="number"
+              <input id="namesGet" class="btmspace-15" type="text"
+                placeholder="Nombres completos" required
+                autocomplete="off">
+              <input id="telefonoGet" class="btmspace-15" type="number"
                 placeholder="Telefono" required autocomplete="off">
-              <input id="email" class="btmspace-15" type="email"
-                placeholder="Correo electronico" required autocomplete="off">
+              <input id="emailGet" class="btmspace-15" type="email"
+                placeholder="Correo electronico" required
+                autocomplete="off">
               <label>¿Como podemos ayudarte?</label>
-              <textarea id="descripcion" class="btmspace-15" type="text"></textarea
+              <textarea id="descripcionGet" class="btmspace-15" type="text"></textarea
                 required autocomplete="off">
               <button type="button" onclick=formContactSend();>Enviar</button>
             </div>
@@ -276,58 +323,55 @@
       </div>
       <!------------- footer ---------------->
       <div class="wrapper row4">
-        <footer id="footer" class="hoc clear">
+        <footer id="footer" class="hoc container">
           <div class="one_quarter">
             <h6 class="heading">Información de contacto</h6>
-            <ul class="nospace btmspace-30 linklist contact">
-              <li><i class="fa fa-map-marker"></i>
-                <address>
-                  Street Name &amp; Number, Town, Postcode/Zip
-                </address>
-              </li>
-              <li><i class="fa fa-phone"></i> +00 (123) 456 7890</li>
-              <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
+            <ul onload=infoContact(); class="nospace btmspace-30 linklist
+              contact">
+              <li id="direccion"><i class="fa fa-map-marker"></i></li>
+              <li id="telefono"><i class="fa fa-phone"></i></li>
+              <li id="correo"><i class="fa fa-envelope-o"></i></li>
             </ul>
           </div>
           <div class="one_quarter">
-            <h6 class="heading">Sapien suspendisse non</h6>
-            <ul class="nospace linklist">
-              <li><a href="#">Egestas cursus purus</a></li>
-              <li><a href="#">Quis rutrum est accumsan</a></li>
-              <li><a href="#">Sed nunc commodo massa</a></li>
-              <li><a href="#">Vel elit eleifend</a></li>
-              <li><a href="#">Sollicitudin morbi feugiat</a></li>
-            </ul>
-          </div>
-          <div class="one_quarter">
-            <h6 class="heading">Siguenos</h6>
+            <h6 class="heading">Redes sociales</h6>
             <ul class="faico clear">
               <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
               <li><a class="faicon-instagram" href="#"><i class="fa
                     fa-instagram"></i></a></li>
-              <li><a class="faicon-envelope" href="#"><i class="fa
-                    fa-envelope-o"></i></a></li>
               <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
               <li><a class="faicon-whatsapp" href="#"><i class="fa fa-whatsapp"></i></a></li>
+            </ul>
+          </div>
+          <div class="one_quarter">
+            <h6 class="heading">Ubicación</h6>
+            <ul class="nospace linklist">
+              <li><a><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0528209990616!2d-75.59236158577549!3d6.256772327943707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44290e4f870f69%3A0xf57f97b59ef52c39!2sEstadio%20de%20F%C3%BAtbol%20Atanasio%20Girardot!5e0!3m2!1ses!2sco!4v1674524940464!5m2!1ses!2sco" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></a></li>
             </ul>
           </div>
         </footer>
       </div>
       <div class="wrapper row5">
         <div id="copyright" class="hoc clear">
-          <p class="fl_left">Copyright &copy; 2022 - Derechos reservados a domain name - <a
+          <p class="fl_left">Copyright &copy; 2022 - Derechos reservados a
+            domain name - <a
               href="#">Desarrollado por URDEV</a></p>
         </div>
       </div>
       <!-- BTN FLOAT WHATSAPP -->
       <a class="float_whatsapp"
-        href="https://api.whatsapp.com/send/?phone=573122665358"
+        href="https://api.whatsapp.com/send/?phone=573122665358&text=hola%20¿me%20gustaría%20recibir%20una%20asesoría%20legal%3F&type=phone_number&app_absent=0"
         target="_blank"><i class="fa fa-whatsapp"></i></a>
       <!-- BTN FLOAT TOP -->
       <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
-      <!-- JAVASCRIPTS -->
-      <script src="app/js/jquerys/jquery.min.js"></script>
-      <!-- <script src="app/js/jquerys/jquery.backtotop.js"></script> -->
-      <script src="app/js/jquerys/jquery.mobilemenu.js"></script>
     </body>
+    <!-- JAVASCRIPTS -->
+    <script src="app/js/jquerys/jquery-3.6.3.min.js"></script>
+    <script>$(document).ready(function () { })</script>
+    <script type="text/javascript" src="app/js/controller/dataContact.js"></script>
+    <script type="text/javascript" src="app/js/controller/contador.js"></script>
+    <script type="text/javascript" src="app/js/controller/menuResponsive.js"></script>
+    <script type="text/javascript" src="app/js/controller/formContact.js"></script>
+    <script type="text/javascript" src="app/js/controller/scroll.js"></script>
+    <script type="text/javascript" src="app/js/jquerys/jquery.mobilemenu.js"></script>
   </html>

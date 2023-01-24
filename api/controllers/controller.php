@@ -14,5 +14,10 @@ if (isset($data->method)) {
             $formContactCtrl = new controller();
             $formContactCtrl->contador($data);
             break;
+        case 'infoContacto':
+            require (__DIR__) . "/../class/controllerClass.php";
+            $formContactCtrl = new controller();
+            $formContactCtrl->infoContact($data);
+            break;
     }
 }

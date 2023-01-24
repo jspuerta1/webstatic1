@@ -4,7 +4,7 @@ require_once (__DIR__) . '/datos/conexion.php';
 //class Controller abstract ------------------
 abstract class ControllerDB
 {
-    //function para la heredar la conexión a la BD
+    //function para instanciar la conexión a la BD
     private $connect;
     function __construct()
     {
@@ -16,9 +16,17 @@ abstract class ControllerDB
         echo json_encode(array('estado' => $estado, 'msg' => $mensaje));
         exit();
     }
+    //query info experiencia
     public function contadorDB()
     {
         $contador = $this->connect->getInstance()->prepare("SELECT * FROM info_experiencia");
+        $contador->execute();
+        return  $contador;
+    }
+    //query info contacto
+    public function infoContactDB()
+    {
+        $contador = $this->connect->getInstance()->prepare("SELECT * FROM info_contacto");
         $contador->execute();
         return  $contador;
     }
@@ -33,8 +41,8 @@ class controller extends ControllerDB
             if ($data->nombres == NULL || $data->telefono == NULL || $data->email == NULL || $data->descripcion == NULL) {
                 //respuesta de estado de la function
                 $estado = -1;
-                $m = 'llene el formulario de contacto completo';
-                $this->jsonReturnLogica($estado, $m);
+                $mensaje = 'llene el formulario de contacto completo';
+                $this->jsonReturnLogica($estado, $mensaje);
             } else {
                 //Correo y asunto
                 $destinatario = "johanpuerta86@gmail.com";
@@ -48,19 +56,33 @@ class controller extends ControllerDB
                 mail($destinatario, $asunto, $informacion);
                 //respuesta de estado de la function
                 $estado = 1;
-                $m = 'correo enviado correctamente';
-                $this->jsonReturnLogica($estado, $m);
+                $mensaje = 'correo enviado correctamente';
+                $this->jsonReturnLogica($estado, $mensaje);
             }
         } catch (PDOException $e) {
             echo $e->getMessage();
         }
     }
-    //function para obtener los valores de la experiencia
+    //function para almacenar los valores de la experiencia
     public function contador($data)
     {
         try {
             if ($data->method === 'contador') {
                 $consulta = $this->contadorDB($data);
+                $response = new stdClass();
+                $response = $consulta->fetchAll(PDO::FETCH_ASSOC);
+                echo json_encode($response);
+            }
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
+    //function para almacenar los valores de la experiencia
+    public function infoContact($data)
+    {
+        try {
+            if ($data->method === 'infoContacto') {
+                $consulta = $this->infoContactDB($data);
                 $response = new stdClass();
                 $response = $consulta->fetchAll(PDO::FETCH_ASSOC);
                 echo json_encode($response);
